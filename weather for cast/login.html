@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Premium Weather</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Standalone overrides for login */
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+        
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .login-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .login-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .login-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            background: #0ea5e9;
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .forgot-pass {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .forgot-pass:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="weather-clear">
+    <div class="background-container" id="bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-container glass-panel">
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">Sign in to access your weather dashboard</p>
+            
+            <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group" style="margin-top: 15px;">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            
+            <a href="#" class="forgot-pass">Forgot your password?</a>
+        </div>
+    </div>
+</body>
+</html>

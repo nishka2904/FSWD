@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Weather Forecast</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Core -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-container" id="bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loader-overlay" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <main class="app-container glass-panel">
+        <header class="app-header">
+            <div class="search-bar">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                <button id="search-btn" class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="error-message" id="error-msg">City not found. Please try again.</div>
+        </header>
+
+        <div class="weather-content" id="weather-content" style="display: none;">
+            <!-- Current Weather Overview -->
+            <section class="current-weather">
+                <div class="weather-main-info">
+                    <div class="city-date">
+                        <h1 id="city-name">London</h1>
+                        <p id="current-date">Mon, 17 Apr</p>
+                    </div>
+                </div>
+                
+                <div class="temperature-container">
+                    <div class="weather-icon-large" id="current-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <div class="temp-display">
+                        <h2 id="current-temp">21°</h2>
+                        <p id="current-desc" class="weather-desc">Partly Cloudy</p>
+                    </div>
+                </div>
+
+                <div class="weather-details glass-panel-inner">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity-val">64%</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Wind</span>
+                            <span class="detail-value" id="wind-val">12 km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-temperature-half"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feels-like-val">22°</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section class="hourly-forecast">
+                <div class="section-header">
+                    <h3>Today</h3>
+                </div>
+                <div class="hourly-slider" id="hourly-container">
+                    <!-- Hourly items will be injected here via JS -->
+                </div>
+            </section>
+
+            <!-- 7-Day Forecast -->
+            <section class="weekly-forecast glass-panel-inner">
+                <div class="section-header">
+                    <h3>7-Day Forecast</h3>
+                </div>
+                <div class="weekly-list" id="weekly-container">
+                    <!-- Weekly items will be injected here via JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

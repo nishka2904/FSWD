@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium technology and gadgets at our modern e-commerce store.">
+    <title>Nexus | Premium Tech Gear</title>
+    <!-- Phosphor Icons for elegant UI icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <i class="ph ph-hexagon"></i> Nexus
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="cart-icon" id="cartBtn" aria-label="Open Shopping Cart">
+                <i class="ph ph-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Elevate Your Audio Experience</h1>
+                <p>Discover the next generation of premium wireless headphones. Crystal clear sound wrapped in a sleek, modern design.</p>
+                <a href="#products" class="btn-primary">
+                    Shop Now <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/premium_headphones_1776436172663.png" alt="Premium Wireless Headphones Background Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay & Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="btn-close" id="closeCartBtn" aria-label="Close Cart">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotalValue">$0.00</span>
+            </div>
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Nexus Gear</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Premium tech essentials designed for modern creators, gamers, and audiophiles.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Keyboards</a></li>
+                        <li><a href="#">Smartwatches</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nexus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
