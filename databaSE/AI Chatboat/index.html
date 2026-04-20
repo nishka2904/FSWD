@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid AI Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-robot"></i>
+                <h1>Nexus AI</h1>
+            </div>
+            
+            <div class="mode-selector">
+                <h3>Select Mode</h3>
+                <button class="mode-btn active" id="general-mode-btn" data-mode="general">
+                    <i class="fa-regular fa-comment"></i> General Chat
+                </button>
+                <button class="mode-btn" id="resume-mode-btn" data-mode="resume">
+                    <i class="fa-solid fa-file-invoice"></i> Resume Builder
+                </button>
+            </div>
+
+            <div class="settings">
+                <h3>Settings</h3>
+                <div class="input-group">
+                    <label for="ai-model">Select AI Provider</label>
+                    <select id="ai-model">
+                        <option value="openai">OpenAI</option>
+                        <option value="gemini">Gemini</option>
+                    </select>
+                </div>
+                <div class="input-group" style="margin-top: 12px;">
+                    <label for="api-key" id="api-key-label">OpenAI API Key</label>
+                    <input type="password" id="api-key" placeholder="Enter API Key...">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div>
+                    <h2 id="current-mode-title">General Conversation</h2>
+                    <p id="current-mode-status">AI System Online</p>
+                </div>
+                <button id="speaker-toggle" class="icon-btn active" title="Toggle Voice Responses">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </header>
+
+            <div class="chat-window" id="chat-window">
+                <div class="message system">
+                    <div class="bubble">
+                        Welcome to Nexus AI! Please select a mode on the left. Enter your API key to begin communicating with the LLM, or we can use simulated responses for now.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <button id="mic-btn" class="mic-btn" title="Click to Toggle Voice Recognition">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <div class="input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Message Nexus AI..." autocomplete="off">
+                    <button id="send-btn" class="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
